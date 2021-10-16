@@ -2,7 +2,7 @@
 fun! s:MakePair()
 	let line = getline('.')
 	let len = strlen(line)
-	if line[len - 1] == ";"
+	if line[len - 1] == ";" || line[len - 1] == ","
 		normal! lx$P
 	else
 		normal! lx$p
